@@ -1,0 +1,201 @@
+Q.1 Write a program for to calculate both the Simple Interest and the Total Amount
+principal=float(input("Enter the principle amount:"))
+time=int(input("Enter the time(years):"))
+rate=float(input("Enter the rate:"))
+simple_interest=(principal*time*rate)/100
+print("The simple interest is:",simple_interest)
+total_amount = principal + simple_interest
+print("The total amount is:", total_amount)
+
+
+Q.2 Python program to calculate the Factorial of a number using a for loop
+num = int(input("Enter a number: "))
+factorial = 1
+if num < 0:
+ print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+ print("The factorial of 0 is 1")
+else:
+ for i in range(1,num + 1):
+ factorial = factorial*i
+ print("The factorial of",num,"is",factorial)
+
+
+Q.3 Write a program for Fibonacci Series
+n=int(input("Enter the number of terms: "))
+a=0
+b=1
+if n<=0:
+ print("The Output of your input is",a)
+else:
+ print(a,b,end=" ")
+for x in range(2,n):
+ c=a+b
+ print(c,end=" ")
+ a=b
+ b=c
+
+
+Q.4 Write a program for greatest among Three numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+if (num1 >= num2) and (num1 >= num3):
+ largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+ largest = num2
+else:
+ largest = num3
+print("The largest number is", largest)
+
+
+Q.5 Write a python program to find the sum of Numbers from 1 to N USING WHILE
+LOOP:
+num = int(input("Enter the value of num: "))
+if num < 0:
+ print("Enter a positive number")
+else:
+ sum = 0
+ while(num > 0):
+ sum = sum+num
+ num =num- 1
+ print("The sum is", sum)
+
+
+Q.6 Python program to print the multiplication table of a number using a while
+loop
+n = int(input("Enter any Number :"));
+i = 1
+while i < 11:
+ value = n * i
+ print(n , " * ", i ," = " , value)
+ i = i + 1
+
+
+Q.7 Python program to calculate a 10% discount for 4 items
+item1 = float(input("Enter the price of item 1: "))
+item2 = float(input("Enter the price of item 2: "))
+item3 = float(input("Enter the price of item 3: "))
+item4 = float(input("Enter the price of item 4: "))
+total_price = item1 + item2 + item3 + item4
+discount = total_price * 0.10
+final_price = total_price - discount
+print("Total Price", total_price)
+print("Discount (10%):”, discount)
+print("Final Price after Discount: ", final_price)
+
+
+Q.8 .Writ a CV program to load an image:
+import cv2
+from matplotlib import pyplot as plt
+import numpy as np
+img = cv2.imread('D:/images/p2.jfif')
+plt.imshow(img)
+plt.title('parrot')
+plt.axis('off')
+plt.show()
+
+
+Q.9 Write a CV program to convert BGR IMAGE TO RGB IMAGE
+import cv2
+from matplotlib import pyplot as plt
+import numpy as np # import numpy
+img = cv2.imread('D:/images/p2.jfif')
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.title('parrot')
+plt.axis('off')
+plt.show() 
+
+
+Q.10. Write a CV program to READ IMAGE AS GRAYSCALE
+import cv2
+from matplotlib import pyplot as plt
+import numpy as np
+img = cv2.imread('D:/images/p2.jfif',0) # the number zero
+opens the image as a grayscale image
+plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
+#cmap specifies color mapping, gray in this case.
+plt.title('PARROT')
+plt.axis('off')
+plt.show()
+
+
+Q.11 Write a CV program to
+i. To see what's the size of the image
+ii. To see the minimum and maximum pixel value present in the
+image
+import cv2
+from matplotlib import pyplot as plt
+import numpy as np
+img = cv2.imread('D:/images/p2.jfif')
+print(img.shape)
+print (img.min())
+print (img.max())
+
+
+Q.12 Write a program to show line graph with 2 set of values
+import matplotlib.pyplot as plt
+# x-axis values
+x = [5, 2, 9, 4, 7]
+# y-axis values
+y = [10, 5, 8, 4, 2]
+plt.plot(x, y)
+plt.ylabel("y-axis")
+plt.xlabel("x-axis")
+plt.show()
+
+
+Q.13 Write a program to show scatter plot
+import matplotlib.pyplot as plt
+x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]
+y = [20, 22, 23, 20, 10, 40, 12, 30, 15, 30, 25, 20, 20]
+plt.xlabel('Age')
+plt.ylabel('Weight')
+plt.title('Age-Weight')
+plt.scatter(x, y, color='m')
+plt.show()
+
+
+Q.14. Write a program to show bar graph
+import matplotlib.pyplot as plt
+# x-axis values
+subjects = ['English', 'SLA', 'Maths', 'Science', 'Social', 'AI']
+# y-axis values
+marks = [45, 32, 40, 33, 31, 48]
+plt.bar(subjects, marks, color='cyan')
+plt.ylabel("Marks scored")
+plt.xlabel("Subjects")
+plt.title("Exam Marks", fontsize=20, color='green')
+plt.show()
+
+
+Q.15. Write a program to calculate the mean,mode,median,standard deviation
+and variance.
+import statistics as stats
+datasets=[5,9,7,6,3,4,0,10]
+x=stats.mean(datasets)
+datasets=[5,9,7,6,3,4,0,-3,-4,2]
+y=stats.median(datasets)
+datasets=[5,9,7,6,3,4,0,10,5,7,3,5]
+z=stats.mode(datasets)
+datasets=[5,9,7,6,3,4,0,10,5,7,3,5]
+sd=stats.stdev(datasets)
+datasets=[5,9,7,6,3,4,0,10,5,7,3,5]
+var=stats.variance(datasets)
+print(“Mean is”,x)
+print(“Median is”,y)
+print(“Mode is”,z)
+print(“Standard deviation is”,sd)
+print(“Variance is”,var)
+
+
+Q.16. Write a program to show histogram
+import matplotlib.pyplot as plt
+population_age = [21, 53, 60, 46, 25, 27, 38, 42, 40, 1, 2, 102, 95, 8, 15, 183, 78, 65, 55, 78, 75, 68, 52, 44, 4]
+bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110]
+plt.hist(population_age, bins, color='green')
+plt.xlabel('Age groups', color='y')
+plt.ylabel('Number of people', fontsize=14, color='m')
+plt.xticks(bins)
+plt.title('Population distribution')
+plt.show()
