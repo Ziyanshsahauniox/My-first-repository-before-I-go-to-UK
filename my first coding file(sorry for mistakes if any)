@@ -1,16 +1,8 @@
 Write a program for Fibonacci Series
-n=int(input("Enter the number of terms: "))
-a=0
-b=1
-if n<=0:
- print("The Output of your input is",a)
-else:
- print(a,b,end=" ")
-for x in range(2,n):
- c=a+b
- print(c,end=" ")
- a=b
- b=c
+n = int(input("enter the number of terms:"))
+a, b = 0, 1 
+for _ in range(n):
+    print(a, end=" ")
 
 Write a program for to calculate both the Simple Interest and the Total Amount
 principal=float(input("Enter the principle amount:"))
@@ -195,10 +187,10 @@ datasets=[5,9,7,6,3,4,0,10,5,7,3,5]
 sd=stats.stdev(datasets)
 datasets=[5,9,7,6,3,4,0,10,5,7,3,5]
 var=stats.variance(datasets)
-print(“Mean is”,x)
-print(“Median is”,y)
-print(“Mode is”,z)
-print(“Standard deviation is”,sd)
-print(“Variance is”,var)
+print("Mean is",x)
+print("Median is",y)
+print("Mode is",z)
+print("Standard deviation is",sd)
+print("Variance is",var)
 
 
